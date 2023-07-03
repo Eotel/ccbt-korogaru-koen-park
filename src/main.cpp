@@ -182,7 +182,7 @@ bool readOscPreference() {
         preferences.begin("osc", true);
         oscServerIp = preferences.getString("oscServerIp", "192.168.100.10");
         oscServerPort = preferences.getInt("oscServerPort", 9000);
-        clientName = preferences.getString("clientName", "ccbt5");
+        clientName = preferences.getString("clientName", "ccbt1");
         preferences.end();
     } catch (std::exception &e) {
         Serial.println(e.what());
@@ -216,7 +216,7 @@ void connectWiFi() {
     wm.setConfigPortalTimeout(180);
     wm.setMinimumSignalQuality();
     wm.setSTAStaticIPConfig(
-            IPAddress(192, 168, 100, 15),
+            IPAddress(192, 168, 100, 11),
             IPAddress(192, 168, 100, 1),
             IPAddress(255, 255, 255, 0)
     );
